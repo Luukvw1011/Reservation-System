@@ -1,1 +1,41 @@
-node_modules
+# Laravel specific
+/vendor
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/.idea
+/.vscode
+/.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+.env
+.env.backup
+.env.*.php
+.env.*.bak
+
+# Laravel Livewire specific (temporary files)
+public/livewire/*
+!public/livewire/.gitignore
+
+# Composer dependencies
+composer.lock
+composer.phar
+
+# NPM/Yarn/Pnpm
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+/storage/logs/*.log
+*.log
+
+# Cache
+bootstrap/cache/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/testing/*
+storage/framework/views/*
+
+# IDE /
