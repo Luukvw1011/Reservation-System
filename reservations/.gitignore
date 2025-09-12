@@ -1,0 +1,55 @@
+# --- Laravel / PHP ---
+/vendor/
+bootstrap/cache/*.php
+!bootstrap/cache/.gitignore
+
+storage/*.key
+storage/logs/*.log
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*.php
+storage/framework/testing/*
+storage/app/public/*
+public/storage
+
+/.phpunit.cache
+.phpunit.result.cache
+/.php-cs-fixer.cache
+/.php_cs.cache
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# --- Node / Vite / Tailwind ---
+/node_modules/
+public/hot
+public/build/
+public/mix-manifest.json
+
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+
+# --- Test coverage / reports ---
+/coverage/
+clover.xml
+junit.xml
+/.nyc_output
+
+# --- SQLite dev DB (uncomment the next line to commit a blank DB if you prefer) ---
+database/*.sqlite
+# !database/database.sqlite
+
+# --- OS / Editor junk ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+*.swp
+*.swo
+
+# --- Misc logs ---
+*.log
