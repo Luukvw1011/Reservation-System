@@ -29,12 +29,12 @@
                 <span
                     class="flex items-center gap-2 text-xl font-bold text-stone-100"
                 >
-                    DineFind
+                    Find&Dine
                 </span>
 
                 <nav>
                     <ul
-                        class="flex items-center gap-6 text-stone-500 text-sm leading-none"
+                        class="nav-items flex items-center gap-6 text-stone-500 text-sm leading-none"
                     >
                         <li>Explore</li>
                         <li>Favorites</li>
@@ -44,9 +44,13 @@
             </div>
 
             {{-- User section --}}
-            <div class="flex gap-3 text-stone-500">
-                <a class="border-2 px-3 py-1 rounded">Register</a>
-                <a class="border-2 px-3 py-1 rounded">Log in</a>
+            <div class="flex gap-3 text-stone-100">
+                <a class="border-2 px-3 py-1 rounded border-stone-100">
+                    Register
+                </a>
+                <a class="border-2 px-3 py-1 rounded border-stone-100">
+                    Log in
+                </a>
             </div>
         </header>
         <!-- Hero -->
@@ -132,7 +136,7 @@
         <footer
             class="bg-stone-950/50 p-5 text-sm text-stone-500 flex justify-between"
         >
-            <span>© 2024 DineFind. All rights reserved.</span>
+            <span>© 2024 Find&Dine. All rights reserved.</span>
 
             <ul class="flex gap-5">
                 <li>Contact</li>
