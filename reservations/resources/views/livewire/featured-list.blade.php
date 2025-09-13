@@ -1,9 +1,9 @@
-<div class="grid grid-cols-3 gap-4 mt-5 mb-20">
+<div class="grid grid-cols-3 gap-4 mt-5">
     @foreach ($restaurants as $restaurant)
         <div class="restaurant-item">
             <img
                 alt="{{ $restaurant->title }}"
-                class="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-t-md"
+                class="h-full w-full object-cover object-center lg:h-3/4 lg:w-full rounded-t-md"
                 src="{{ $restaurant->image }}"
             />
             <div
