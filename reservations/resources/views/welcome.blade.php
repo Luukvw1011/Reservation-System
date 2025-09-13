@@ -77,6 +77,7 @@
                     </p>
 
                     <!-- Search -->
+                    {{-- Livewire component --}}
                     <form
                         class="mt-6 md:mt-8 flex items-stretch justify-center gap-3"
                         action="/search"
@@ -125,27 +126,7 @@
                 Featured restaurants
             </span>
 
-            {{-- Livewire component --}}
-            <div class="mt-10">
-                <div class="restaurant-item w-1/4">
-                    <img
-                        alt="The Gilded Spoon"
-                        class="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-md"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2nYh9sKGmDUxJPma3qchV5qjaN92ej0aoeLhSGBkS6Y4Dlo0ywUtcwn-XvmShLo21VnjG48Gz9BV0ImdKjJO5gd7OhicLcquTcNZrqITpzDONeD8bxw1RBmd1Aves0ATH5z8zhROfVlblSzBkI6K_hPVu1pZdPSke209KFLgLxAaivAsMWuyHi4ZTLDwlGn1jX6ktEDtR8lxWtYO24IUqqC7_337K2O_RXN_79ZZt_LitH7JA-mB03t4jILc43BXAykYoXUvSfU"
-                    />
-                    <div class="flex items-center justify-between py-3">
-                        <div class="flex-row">
-                            <div>Title</div>
-                            <div>Type</div>
-                        </div>
-
-                        <span class="rating">
-                            4.5
-                            <span>(1.2K)</span>
-                        </span>
-                    </div>
-                </div>
-            </div>
+            <livewire:featured-list />
         </section>
 
         <footer
