@@ -23,14 +23,141 @@
         @endif
     </head>
     <body class="bg-stone-900 text-stone-200">
-        <header>
-            <h2>Waiters</h2>
+        <header class="flex items-center justify-between p-4 bg-stone-950/50">
+            <!-- Navigation section -->
+            <div class="flex items-center gap-10">
+                <span
+                    class="flex items-center gap-2 text-xl font-bold text-stone-100"
+                >
+                    DineFind
+                </span>
+
+                <nav>
+                    <ul
+                        class="flex items-center gap-6 text-stone-500 text-sm leading-none"
+                    >
+                        <li>Explore</li>
+                        <li>Favorites</li>
+                        <li>Reservations</li>
+                    </ul>
+                </nav>
+            </div>
+
+            {{-- User section --}}
+            <div class="flex gap-3 text-stone-500">
+                <a class="border-2 px-3 py-1 rounded">Register</a>
+                <a class="border-2 px-3 py-1 rounded">Log in</a>
+            </div>
         </header>
+        <!-- Hero -->
         <section
-            class="relative bg-cover bg-center py-24 md:py-32"
+            class="relative h-[65vh] md:h-[80vh] w-full bg-cover bg-center"
             style="
                 background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&amp;w=1974&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
             "
-        ></section>
+            aria-label="Find restaurants hero"
+        >
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black/60"></div>
+
+            <!-- Content -->
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="max-w-3xl w-full px-4 text-center">
+                    <h1
+                        class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow"
+                    >
+                        Find your next favorite
+                        <br class="hidden md:block" />
+                        restaurant
+                    </h1>
+
+                    <p class="mt-4 md:mt-6 text-base md:text-xl text-white/80">
+                        Discover and book tables at the best restaurants in your
+                        city.
+                    </p>
+
+                    <!-- Search -->
+                    <form
+                        class="mt-6 md:mt-8 flex items-stretch justify-center gap-3"
+                        action="/search"
+                        method="GET"
+                    >
+                        <div class="relative max-w-xl w-full">
+                            <span
+                                class="pointer-events-none absolute inset-y-0 left-3 flex items-center"
+                            >
+                                <!-- Search icon -->
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 text-white/70"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M12.9 14.32a8 8 0 111.414-1.414l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387zM14 8a6 6 0 11-12 0 6 6 0 0112 0z"
+                                        clip-rule="evenodd"
+                                    />
+                                </svg>
+                            </span>
+
+                            <input
+                                type="text"
+                                name="q"
+                                placeholder="Search by restaurant, cuisine, or location"
+                                class="w-full rounded-xl bg-neutral-900/70 backdrop-blur px-10 md:px-11 py-3 md:py-4 text-white placeholder-white/60 outline-none ring-1 ring-white/10 focus:ring-2 focus:ring-white/30"
+                            />
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="rounded-xl px-5 md:px-6 py-3 md:py-4 font-semibold text-white bg-orange-600 hover:bg-orange-500 active:bg-orange-700 transition"
+                        >
+                            Search
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="p-6">
+            <span class="text-lg font-bold text-stone-100">
+                Featured restaurants
+            </span>
+
+            {{-- Livewire component --}}
+            <div class="mt-10">
+                <div class="restaurant-item w-1/4">
+                    <img
+                        alt="The Gilded Spoon"
+                        class="h-full w-full object-cover object-center lg:h-full lg:w-full rounded-md"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE2nYh9sKGmDUxJPma3qchV5qjaN92ej0aoeLhSGBkS6Y4Dlo0ywUtcwn-XvmShLo21VnjG48Gz9BV0ImdKjJO5gd7OhicLcquTcNZrqITpzDONeD8bxw1RBmd1Aves0ATH5z8zhROfVlblSzBkI6K_hPVu1pZdPSke209KFLgLxAaivAsMWuyHi4ZTLDwlGn1jX6ktEDtR8lxWtYO24IUqqC7_337K2O_RXN_79ZZt_LitH7JA-mB03t4jILc43BXAykYoXUvSfU"
+                    />
+                    <div class="flex items-center justify-between py-3">
+                        <div class="flex-row">
+                            <div>Title</div>
+                            <div>Type</div>
+                        </div>
+
+                        <span class="rating">
+                            4.5
+                            <span>(1.2K)</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer
+            class="bg-stone-950/50 p-5 text-sm text-stone-500 flex justify-between"
+        >
+            <span>© 2024 DineFind. All rights reserved.</span>
+
+            <ul class="flex gap-5">
+                <li>Contact</li>
+                <li>Terms</li>
+                <li>For restaurants</li>
+            </ul>
+        </footer>
     </body>
 </html>
