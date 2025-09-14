@@ -1,13 +1,13 @@
 <div class="grid grid-cols-3 gap-4 mt-5">
     @foreach ($restaurants as $restaurant)
-        <div class="restaurant-item">
+        <div>
             <img
                 alt="{{ $restaurant->title }}"
                 class="h-full w-full object-cover object-center lg:h-3/4 lg:w-full rounded-t-md"
                 src="{{ $restaurant->image }}"
             />
             <div
-                class="flex items-center justify-between p-3 bg-stone-800 rounded-b-md"
+                class="restaurant-item flex items-center justify-between p-3 bg-stone-800 rounded-b-md"
             >
                 <div class="flex-row">
                     <div>{{ $restaurant->title }}</div>

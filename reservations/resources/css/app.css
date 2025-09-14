@@ -15,3 +15,20 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+.restaurant-item { transition: background-color 0.3s ease, transform 0.3s ease; }
+
+.restaurant-item:hover {
+    background-color: oklch(86.9% 0.005 56.366);
+    color: #0a0a0a;
+    cursor: pointer;
+}
+
+.account-buttons a { transition: background-color 0.3s ease, transform 0.3s ease; }
+
+.account-buttons a:hover {
+    cursor: pointer;
+    background-color: oklch(86.9% 0.005 56.366);
+    color: #0a0a0a;
+
+}

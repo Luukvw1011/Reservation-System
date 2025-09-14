@@ -43,12 +43,11 @@
                 </nav>
             </div>
 
-            {{-- User section --}}
-            <div class="flex gap-3 text-stone-100">
-                <a class="border-2 px-3 py-1 rounded border-stone-100">
+            <div class="account-buttons flex gap-3 text-stone-300">
+                <a class="border-2 px-3 py-1 rounded border-stone-300">
                     Register
                 </a>
-                <a class="border-2 px-3 py-1 rounded border-stone-100">
+                <a class="border-2 px-3 py-1 rounded border-stone-300">
                     Log in
                 </a>
             </div>
@@ -88,9 +87,14 @@
         <livewire:search-result />
 
         <section class="p-6">
-            <span class="text-lg font-bold text-stone-100">
-                Featured restaurants
-            </span>
+            <div class="flex justify-between">
+                <span class="text-lg font-bold text-stone-100">
+                    Featured restaurants
+                </span>
+                <a href="#" class="text-sm font-bold text-orange-600">
+                    View all ->
+                </a>
+            </div>
 
             <livewire:featured-list />
         </section>
