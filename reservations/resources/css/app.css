@@ -10,15 +10,34 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-.nav-items li:hover {
-    color: white;
+.nav-items li {
+    position: relative;
     cursor: pointer;
-    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
-.restaurant-item { transition: background-color 0.3s ease, transform 0.3s ease; }
+.nav-items li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* tweak depending on font size */
+    width: 0;
+    height: 2px; /* underline thickness */
+    background-color: rgb(214 211 209); /* stone-300 */
+    transition: width 0.3s ease;
+}
 
-.restaurant-item:hover {
+.nav-items li:hover {
+    color: rgb(214 211 209); /* text changes on hover */
+}
+
+.nav-items li:hover::after {
+    width: 100%; /* underline animates */
+}
+
+.restaurant-item, .search-item { transition: background-color 0.3s ease, transform 0.3s ease; }
+
+.restaurant-item-wrapper:hover .restaurant-item, .search-item:hover {
     background-color: oklch(86.9% 0.005 56.366);
     color: #0a0a0a;
     cursor: pointer;

@@ -10,7 +10,7 @@
             <div class="grid grid-cols-2 gap-4 mt-4">
                 @forelse ($restaurants as $restaurant)
                     <div
-                        class="restaurant-item flex items-center justify-between p-3 bg-stone-800 rounded-md"
+                        class="search-item flex items-center justify-between p-3 bg-stone-800 rounded-md"
                     >
                         <div>
                             <div>{{ $restaurant->title }}</div>

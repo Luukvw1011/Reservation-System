@@ -104,7 +104,7 @@
         >
             <span>© 2024 Find&Dine. All rights reserved.</span>
 
-            <ul class="flex gap-5">
+            <ul class="nav-items flex gap-5">
                 <li>Contact</li>
                 <li>Terms</li>
                 <li>For restaurants</li>
