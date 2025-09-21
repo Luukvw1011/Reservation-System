@@ -133,7 +133,10 @@
             Register
         </button>
 
-        <a href="#" class="text-sm text-gray-400 hover:text-gray-300">
+        <a
+            href="{{ route("login-page") }}"
+            class="text-sm text-gray-400 hover:text-gray-300"
+        >
             Already have an account? Log in
         </a>
     </div>
