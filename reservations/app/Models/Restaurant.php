@@ -15,7 +15,6 @@ class Restaurant extends Model
     use HasUuids;
 
     protected $table = 'restaurants';
-
     public $incrementing = false;
     protected $keyType = 'string';
 
@@ -24,7 +23,8 @@ class Restaurant extends Model
         'type',
         'rating',
         'votes',
-        'image'
+        'image',
+        'user_id',
     ];
 
     protected $casts = [
