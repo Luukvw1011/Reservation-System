@@ -244,6 +244,7 @@
       <path value="$PROJECT_DIR$/reservations/vendor/sebastian/recursion-context" />
       <path value="$PROJECT_DIR$/reservations/vendor/sebastian/lines-of-code" />
       <path value="$PROJECT_DIR$/reservations/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/reservations/vendor/spatie/laravel-permission" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

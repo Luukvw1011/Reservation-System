@@ -21,9 +21,14 @@
         </div>
 
         <div class="account-buttons flex gap-3 text-stone-300">
-            <a class="border-2 px-3 py-1 rounded border-stone-300">Register</a>
             <a
-                href="{{ route("login-page") }}"
+                href="{{ route("register-page") }}"
+                class="border-2 px-3 py-1 rounded border-stone-300"
+            >
+                Register
+            </a>
+            <a
+                href="{{ route("login") }}"
                 class="border-2 px-3 py-1 rounded border-stone-300"
             >
                 Log in
@@ -85,11 +90,11 @@
         <ul class="nav-items flex gap-5">
             <li>Contact</li>
             <li>Terms</li>
-            <li>
-                <a href="{{ route("owner-register") }}">
-                    For restaurant owners
-                </a>
-            </li>
+            @auth
+                <li>
+                    <a href="#">For restaurant owners</a>
+                </li>
+            @endauth
         </ul>
     </footer>
 </x-layouts.app>
