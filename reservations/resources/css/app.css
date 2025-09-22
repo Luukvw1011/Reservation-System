@@ -43,9 +43,9 @@
     cursor: pointer;
 }
 
-.account-buttons a { transition: background-color 0.3s ease, transform 0.3s ease; }
+.account-buttons a, .logout-btn { transition: background-color 0.3s ease, transform 0.3s ease; }
 
-.account-buttons a:hover {
+.account-buttons a:hover, .logout-btn:hover {
     cursor: pointer;
     background-color: oklch(86.9% 0.005 56.366);
     color: #0a0a0a;

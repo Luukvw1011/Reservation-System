@@ -20,20 +20,38 @@
             </nav>
         </div>
 
-        <div class="account-buttons flex gap-3 text-stone-300">
-            <a
-                href="{{ route("register-page") }}"
-                class="border-2 px-3 py-1 rounded border-stone-300"
-            >
-                Register
-            </a>
-            <a
-                href="{{ route("login") }}"
-                class="border-2 px-3 py-1 rounded border-stone-300"
-            >
-                Log in
-            </a>
-        </div>
+        @guest
+            <div class="account-buttons flex gap-3 text-stone-300">
+                <a
+                    href="{{ route("register-page") }}"
+                    class="border-2 px-3 py-1 rounded border-stone-300"
+                >
+                    Register
+                </a>
+                <a
+                    href="{{ route("login") }}"
+                    class="border-2 px-3 py-1 rounded border-stone-300"
+                >
+                    Log in
+                </a>
+            </div>
+        @endguest
+
+        @auth
+            <div class="flex items-center gap-3 text-sm text-stone-200">
+                <span>Welcome back, {{ auth()->user()->name }}!</span>
+                <form method="POST" action="{{ route("logout") }}">
+                    @csrf
+
+                    <button
+                        type="submit"
+                        class="logout-btn border-2 px-3 py-1 rounded border-stone-300"
+                    >
+                        Log out
+                    </button>
+                </form>
+            </div>
+        @endauth
     </x-slot>
 
     <section

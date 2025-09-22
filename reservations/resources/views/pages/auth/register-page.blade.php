@@ -20,7 +20,7 @@
             <div class="mt-6 text-center text-sm text-neutral-400">
                 Already have an account?
                 <a
-                    href="{{ route("login-page") }}"
+                    href="{{ route("login") }}"
                     class="font-medium text-neutral-200 hover:underline"
                 >
                     Log in
