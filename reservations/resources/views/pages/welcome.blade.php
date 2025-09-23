@@ -110,7 +110,7 @@
             <li>Terms</li>
             @auth
                 <li>
-                    <a href="#">For restaurant owners</a>
+                    <a href="{{ route('owner-register-page') }}">For restaurant owners</a>
                 </li>
             @endauth
         </ul>
