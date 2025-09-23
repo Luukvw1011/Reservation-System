@@ -60,6 +60,8 @@ class OwnerRegisterForm extends Component
 
     public string $successMessage = '';
 
+    public bool $submitted = false;
+
     public function nextStep(): void
     {
         if ($this->step >= count($this->steps) - 1) {
@@ -93,6 +95,7 @@ class OwnerRegisterForm extends Component
 
         $this->step = 0;
         $this->successMessage = __('Thanks! Our partnerships team will reach out soon.');
+        $this->submitted = true;
     }
 
     protected function validateStep(int $step): void
