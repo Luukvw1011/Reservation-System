@@ -2,7 +2,11 @@
 
 namespace App\Livewire;
 
+use App\Enums\SubmissionStatus;
 use App\Livewire\Forms\OwnerRegisterFormObject;
+use App\Models\Restaurant;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class OwnerRegisterForm extends Component
@@ -90,6 +94,9 @@ class OwnerRegisterForm extends Component
     {
         $this->form->validate();
 
+        $this->updateUserInfo();
+        $this->submitRestaurantInfo();
+
         $this->resetErrorBag();
         $this->form->reset();
 
@@ -118,6 +125,27 @@ class OwnerRegisterForm extends Component
         if ($stepRules !== []) {
             $this->validate($stepRules);
         }
+    }
+
+    public function updateUserInfo(): void {
+        $currentUser = Auth::user();
+        $currentUser->owner_since = now();
+
+        $currentUser->save();
+    }
+
+    public function submitRestaurantInfo(): void {
+        Restaurant::create([
+            'title' => $this->form->restaurant_name,
+            'type' => $this->form->restaurant_type,
+            'status' => SubmissionStatus::STATUS_PENDING,
+            'owner_user_id' => Auth::id(),
+            'city' => $this->form->city,
+            'contact_email' => $this->form->contact_email,
+            'contact_phone' => $this->form->contact_phone,
+            'website' => $this->form->website,
+            'notes' => '',
+        ]);
     }
 
     public function render()

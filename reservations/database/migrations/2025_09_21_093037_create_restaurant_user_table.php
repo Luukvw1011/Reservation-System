@@ -9,7 +9,7 @@ return new class extends Migration {
     {
         Schema::create('restaurant_user', function (Blueprint $table) {
             // Foreign keys
-            $table->foreignId('restaurant_id')->constrained()->cascadeOnDelete();
+            $table->foreignUuid('restaurant_id')->constrained()->cascadeOnDelete();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
 
             // Role of this user *at this restaurant* (future-proof for manager/staff)

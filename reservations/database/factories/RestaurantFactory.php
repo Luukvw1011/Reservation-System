@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Enums\SubmissionStatus;
 use App\Models\Restaurant;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -28,16 +29,23 @@ class RestaurantFactory extends Factory
         ];
 
         $types = [
-            'Italian','Chinese','Indian','Mexican','American','Thai',
-            'Japanese','Mediterranean','Vegan','Bakery','Cafe','BBQ','Seafood',
+            'Italian', 'Chinese', 'Indian', 'Mexican', 'American', 'Thai',
+            'Japanese', 'Mediterranean', 'Vegan', 'Bakery', 'Cafe', 'BBQ', 'Seafood',
         ];
 
         return [
-            'title'  => $this->faker->unique()->company(),               // e.g. "Golden Spoon LLC"
-            'type'   => $this->faker->randomElement($types),            // cuisine type
-            'rating' => $this->faker->numberBetween(10, 50) / 10,       // 1.0–5.0
-            'votes'  => $this->faker->numberBetween(0, 5000),
-            'image'  => $this->faker->randomElement($images),
+            'title' => $this->faker->unique()->company(),
+            'type' => $this->faker->randomElement($types),
+            'status' => SubmissionStatus::STATUS_PENDING,
+            'owner_user_id' => null,
+            'city' => $this->faker->city(),
+            'contact_email' => $this->faker->safeEmail(),
+            'contact_phone' => $this->faker->optional()->phoneNumber(),
+            'website' => $this->faker->optional()->url(),
+            'notes' => $this->faker->optional()->paragraph(),
+            'rating' => $this->faker->numberBetween(10, 50) / 10,
+            'votes' => $this->faker->numberBetween(0, 5000),
+            'image' => $this->faker->randomElement($images),
         ];
     }
 }
