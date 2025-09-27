@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\EnsureUserIsOwner;
 
 // Guest-only (no logged-in user)
 Route::middleware('guest')->group(function () {
@@ -22,6 +23,8 @@ Route::middleware('auth')->group(function () {
         return redirect()->route('welcome');
     })->name('logout');
 });
+
+Route::view('/owner-dashboard', 'pages.owner-dashboard')->name('owner-dashboard')->middleware(EnsureUserIsOwner::class);
 
 // Public
 Route::view('/', 'pages.welcome')->name('welcome');

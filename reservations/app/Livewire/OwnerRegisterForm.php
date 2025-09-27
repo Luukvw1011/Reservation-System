@@ -135,6 +135,8 @@ class OwnerRegisterForm extends Component
     }
 
     public function submitRestaurantInfo(): void {
+        $img =
+
         Restaurant::create([
             'title' => $this->form->restaurant_name,
             'type' => $this->form->restaurant_type,

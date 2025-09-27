@@ -24,7 +24,21 @@
     </head>
     <body class="bg-stone-900 text-stone-200">
         <header class="flex items-center justify-between p-4 bg-stone-950/50">
-            {{ $header }}
+            @isset($header)
+                {{ $header }}
+            @else
+                <div class="flex justify-between items-center w-full">
+                    <span
+                        class="flex items-center gap-2 text-xl font-bold text-stone-100"
+                    >
+                        Find&Dine
+                    </span>
+
+                    <span class="text-sm font-bold text-orange-600">
+                        <a href="{{ route("welcome") }}"><- return</a>
+                    </span>
+                </div>
+            @endisset
         </header>
         {{ $slot }}
     </body>

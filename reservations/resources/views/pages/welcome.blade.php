@@ -110,7 +110,15 @@
             <li>Terms</li>
             @auth
                 <li>
-                    <a href="{{ route('owner-register-page') }}">For restaurant owners</a>
+                    @if (\Illuminate\Support\Facades\Auth::user()->owner_since)
+                        <a href="{{ route("owner-dashboard") }}">
+                            Owner dashboard
+                        </a>
+                    @else
+                        <a href="{{ route("owner-register-page") }}">
+                            For restaurant owners
+                        </a>
+                    @endif
                 </li>
             @endauth
         </ul>
