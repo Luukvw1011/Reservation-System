@@ -35,7 +35,7 @@
         </header>
 
         <section
-            class="flex flex-col gap-4 rounded-3xl bg-gradient-to-br from-stone-950 via-stone-900 to-stone-950 p-6 shadow-xl shadow-black/40 ring-1 ring-stone-900 sm:flex-row sm:items-center sm:justify-between"
+            class="flex flex-col gap-4 rounded-3xl bg-stone-950 p-6 shadow-xl shadow-black/40 ring-1 ring-stone-900 sm:flex-row sm:items-center sm:justify-between"
         >
             <div>
                 <p
