@@ -53,3 +53,6 @@ Thumbs.db
 
 # --- Misc logs ---
 *.log
+.vapor/
+.env.production
+.env.staging
