@@ -242,6 +242,14 @@
       <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/spatie/laravel-permission" />
+      <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/aws/aws-crt-php" />
+      <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/aws/aws-sdk-php" />
+      <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/hollodotme/fast-cgi-client" />
+      <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/laravel/vapor-core" />
+      <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/mtdowling/jmespath.php" />
+      <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/nyholm/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/riverline/multipart-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/reservations/vendor/symfony/psr-http-message-bridge" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
