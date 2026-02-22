@@ -88,59 +88,7 @@
             </dl>
         </section>
 
-        <section
-            class="rounded-3xl bg-stone-950 p-6 shadow-xl shadow-black/40 ring-1 ring-stone-900"
-        >
-            <div class="flex flex-wrap items-center justify-between gap-4">
-                <h2 class="text-lg font-medium text-stone-50">
-                    Registered restaurants
-                </h2>
-                <a
-                    href="#"
-                    class="text-sm font-medium text-emerald-300 hover:text-emerald-200"
-                >
-                    Manage venues →
-                </a>
-            </div>
-            <p class="mt-2 text-sm text-stone-400">
-                Overview of venues connected to your owner account.
-            </p>
-            <ul class="mt-6 grid gap-4 lg:grid-cols-3">
-                <li
-                    class="rounded-2xl bg-stone-900/80 p-4 shadow-[0_18px_35px_-24px_rgba(0,0,0,0.75)]"
-                >
-                    <p class="font-medium text-stone-50">Riverfront Bistro</p>
-                    <p class="text-xs text-stone-400">
-                        Amsterdam · 85 seats · Open since 2018
-                    </p>
-                    <p class="mt-3 text-xs text-emerald-300">
-                        Last synced 12 minutes ago
-                    </p>
-                </li>
-                <li
-                    class="rounded-2xl bg-stone-900/80 p-4 shadow-[0_18px_35px_-24px_rgba(0,0,0,0.75)]"
-                >
-                    <p class="font-medium text-stone-50">The Garden Terrace</p>
-                    <p class="text-xs text-stone-400">
-                        Rotterdam · 120 seats · Rooftop dining
-                    </p>
-                    <p class="mt-3 text-xs text-sky-300">
-                        Menu update pending review
-                    </p>
-                </li>
-                <li
-                    class="rounded-2xl bg-stone-900/80 p-4 shadow-[0_18px_35px_-24px_rgba(0,0,0,0.75)]"
-                >
-                    <p class="font-medium text-stone-50">Noord Harbor Grill</p>
-                    <p class="text-xs text-stone-400">
-                        Utrecht · 60 seats · Seafood focus
-                    </p>
-                    <p class="mt-3 text-xs text-amber-300">
-                        Team roster synced this morning
-                    </p>
-                </li>
-            </ul>
-        </section>
+        <livewire:owner-dashboard.registered />
 
         <section class="grid gap-6 md:grid-cols-2">
             <article
