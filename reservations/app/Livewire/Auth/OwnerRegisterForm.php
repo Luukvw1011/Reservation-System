@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Livewire;
+namespace App\Livewire\Auth;
 
 use App\Enums\SubmissionStatus;
 use App\Livewire\Forms\OwnerRegisterFormObject;
 use App\Models\Restaurant;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -127,16 +126,16 @@ class OwnerRegisterForm extends Component
         }
     }
 
-    public function updateUserInfo(): void {
+    public function updateUserInfo(): void
+    {
         $currentUser = Auth::user();
         $currentUser->owner_since = now();
 
         $currentUser->save();
     }
 
-    public function submitRestaurantInfo(): void {
-        $img =
-
+    public function submitRestaurantInfo(): void
+    {
         Restaurant::create([
             'title' => $this->form->restaurant_name,
             'type' => $this->form->restaurant_type,
