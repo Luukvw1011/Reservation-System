@@ -90,28 +90,10 @@
 
         <livewire:owner-dashboard.registered />
 
-        <section class="grid gap-6 md:grid-cols-2">
-            <article
-                class="rounded-2xl bg-emerald-950/70 p-6 shadow-lg shadow-black/40 ring-1 ring-stone-900/70"
-            >
-                <p class="text-sm text-emerald-200/80">
-                    Today&#39;s reservations
-                </p>
-                <p class="mt-2 text-3xl font-semibold text-white">18</p>
-                <p class="mt-3 text-xs text-stone-300">
-                    3 walk-ins pending confirmation
-                </p>
-            </article>
-            <article
-                class="rounded-2xl bg-sky-950/70 p-6 shadow-lg shadow-black/40 ring-1 ring-stone-900/70"
-            >
-                <p class="text-sm text-sky-200/90">Occupancy</p>
-                <p class="mt-2 text-3xl font-semibold text-white">78%</p>
-                <p class="mt-3 text-xs text-stone-300">
-                    Dinner peak 19:30–21:00
-                </p>
-            </article>
-        </section>
+        <div class="grid grid-cols-2 gap-5">
+            <livewire:todays-reservations-card />
+            <livewire:occupancy-card />
+        </div>
 
         <section class="grid gap-8 lg:grid-cols-[2fr,1fr]">
             <div

@@ -51,7 +51,5 @@
                 </div>
             </div>
         @endforeach
-
-        <!-- The components in this div should be fetched from the db  -->
     </div>
 </div>
