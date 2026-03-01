@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Auth;
+namespace App\Livewire;
 
 use App\Livewire\Forms\RegisterFormObject;
 use App\Models\User;

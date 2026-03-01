@@ -80,12 +80,12 @@
                     city.
                 </p>
 
-                <livewire:home.search-action />
+                <livewire:search-action />
             </div>
         </div>
     </section>
 
-    <livewire:home.search-result />
+    <livewire:search-result />
 
     <section class="p-6">
         <div class="flex justify-between">
@@ -97,7 +97,7 @@
             </a>
         </div>
 
-        <livewire:home.featured-list />
+        <livewire:featured-list />
     </section>
 
     <footer

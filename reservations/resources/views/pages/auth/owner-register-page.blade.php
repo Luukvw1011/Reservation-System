@@ -12,7 +12,7 @@
                 </p>
             </div>
 
-            <livewire:auth.owner-register-form />
+            <livewire:owner-register-form />
         </div>
     </div>
 </x-layouts.app>

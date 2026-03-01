@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Home;
+namespace App\Livewire;
 
 use Livewire\Component;
 
@@ -16,6 +16,6 @@ class SearchAction extends Component
 
     public function render()
     {
-        return view('livewire.home.search-action');
+        return view('livewire.search-action');
     }
 }
