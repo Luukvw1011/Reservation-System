@@ -6,7 +6,7 @@
             <span class="text-lg font-medium text-stone-50">
                 Registered restaurants
             </span>
-            <span class="mt-2 text-sm text-stone-400">
+            <span class="text-sm text-stone-400">
                 Overview of venues connected to your owner account.
             </span>
         </div>
