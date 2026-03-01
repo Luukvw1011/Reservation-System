@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Home;
+namespace App\Livewire;
 
 use App\Models\Restaurant;
 use Livewire\Component;
@@ -13,8 +13,7 @@ class SearchResult extends Component
     public $search = "";
     protected $listeners = ['restaurantSearchUpdated' => 'setSearch'];
 
-    public function setSearch($term)
-    {
+    public function setSearch($term) {
         $this->search = $term;
         $this->resetPage();
     }
@@ -28,7 +27,7 @@ class SearchResult extends Component
             ->orderBy('rating', 'desc')
             ->paginate(10);
 
-        return view('livewire.home.search-result', [
+        return view('livewire.search-result', [
             'restaurants' => $restaurants,
         ]);
     }
