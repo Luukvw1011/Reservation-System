@@ -21,8 +21,8 @@ class Registered extends Component
     {
         $restaurants = Restaurant::query()
             ->where('owner_user_id', Auth::id())
-            ->get()
             ->take(3)
+            ->get()
             ->map(function (Restaurant $restaurant): array {
                 return [
                     'id' => $restaurant->id,
